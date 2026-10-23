@@ -126,6 +126,7 @@ color:var(--schiefer);cursor:pointer;margin-bottom:-1px}
 .kartenbild img{width:min(260px,70vw);aspect-ratio:488/680;border-radius:4.75%/3.5%;box-shadow:0 8px 28px rgba(0,0,0,.28);background:var(--hauch)}
 .kartenbild img+img{margin-top:8px}
 .liste-kopf{display:grid;grid-template-columns:1fr}
+.liste-hinweis{margin:0;padding:14px 18px 0;font-size:.95rem}
 .liste-kopf .kartenbild{order:-1;padding:16px 0 0}
 .liste-kopf .kartenbild img{width:min(220px,60vw)}
 @media(min-width:1000px){.liste-kopf:has(.kartenbild){grid-template-columns:1fr 290px}.liste-kopf .kartenbild{order:2;padding:18px 18px 18px 0;position:sticky;top:130px;align-self:start}.liste-kopf .kartenbild img{width:260px}}
@@ -136,7 +137,9 @@ color:var(--schiefer);cursor:pointer;margin-bottom:-1px}
 @media(prefers-color-scheme:dark){.beleg.b{background:#173826;color:#9fe0b6}.beleg.i{background:#3a2c10;color:#f3cd86}}
 .analyse-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px 24px;margin-top:14px}
 .analyse-raster h4{margin:0 0 6px;font-size:.95rem}
-.analyse-raster ol{margin:0;padding-left:20px}.analyse-raster li{margin:4px 0;line-height:1.35}
+.analyse-raster ol{margin:0;padding-left:20px}.analyse-raster li{margin:5px 0;line-height:1.35}
+.analyse-raster .erkl{margin:0 0 8px;min-height:2.6em}
+.analyse-raster .wert-r{float:right;font-weight:700;font-variant-numeric:tabular-nums;margin-left:8px}
 
 .sortieren{display:inline-flex;align-items:center;gap:6px;font-weight:600}
 .sortieren select{font:inherit;padding:4px 8px;border-radius:8px;border:1px solid var(--linie);background:var(--papier);color:var(--tinte)}
