@@ -140,7 +140,10 @@ color:var(--schiefer);cursor:pointer;margin-bottom:-1px}
 .analyse-raster h4{margin:0 0 6px;font-size:.95rem}
 .analyse-raster ol{margin:0;padding-left:20px}.analyse-raster li{margin:5px 0;line-height:1.35}
 .analyse-raster .erkl{margin:0 0 8px;min-height:2.6em}
+@media(min-width:760px){.analyse-raster .erkl{min-height:4.1em}}
 .analyse-raster .wert-r{float:right;font-weight:700;font-variant-numeric:tabular-nums;margin-left:8px}
+.analyse-raster .zeile2{display:block;line-height:1.3;margin-top:1px}
+.analyse-raster h4 .unter{font-weight:500;margin-left:4px}
 
 .sortieren{display:inline-flex;align-items:center;gap:6px;font-weight:600}
 .sortieren select{font:inherit;padding:4px 8px;border-radius:8px;border:1px solid var(--linie);background:var(--papier);color:var(--tinte)}
