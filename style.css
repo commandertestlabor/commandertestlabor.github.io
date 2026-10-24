@@ -134,6 +134,7 @@ color:var(--schiefer);cursor:pointer;margin-bottom:-1px}
 .analyse{margin-top:16px}
 .analyse .procontra{margin:12px 0 0}.analyse .procontra>div{background:var(--hauch);border:0}
 .beleg{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.02em;padding:1px 7px;border-radius:99px;vertical-align:middle;white-space:nowrap}
+.neu-marke{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:99px;vertical-align:middle;background:var(--blau);color:#fff;margin-left:6px}
 .beleg.b{background:#e3f1e8;color:#1f6b3a}.beleg.i{background:#fbf0d9;color:#8a5a00}.beleg.t{background:#ececf0;color:#55556a}
 @media(prefers-color-scheme:dark){.beleg.b{background:#173826;color:#9fe0b6}.beleg.i{background:#3a2c10;color:#f3cd86}.beleg.t{background:#2c2c36;color:#c4c4d4}}
 .analyse-raster{display:grid;grid-template-columns:1fr;gap:18px 28px;margin-top:14px}
