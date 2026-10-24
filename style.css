@@ -113,6 +113,7 @@ color:var(--tinte);display:flex;justify-content:space-between;align-items:center
 .abschnitt>h2{margin-bottom:6px}
 .abschnitt>.leise{max-width:70ch}
 
+.kiwarn{color:#b26a00;font-size:.9em;cursor:help}
 /* Gesamtzahlen im Kopf der Startseite */
 .gesamtleiste{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px;padding:0}
 .gesamtleiste li{background:var(--hauch);border:1px solid var(--linie);border-radius:99px;padding:5px 12px;font-size:.92rem;color:var(--schiefer)}
