@@ -113,6 +113,10 @@ color:var(--tinte);display:flex;justify-content:space-between;align-items:center
 .abschnitt>h2{margin-bottom:6px}
 .abschnitt>.leise{max-width:70ch}
 
+.nur-fans{margin:.6em 0 .8em;padding:.55em .8em;border-left:3px solid var(--blau);background:color-mix(in srgb,var(--blau) 8%,transparent);border-radius:6px}
+.nur-fans .schritte{margin:.35em 0 0;padding-left:1.3em}.nur-fans .schritte li{margin:.15em 0}
+.fans-marke{display:inline-block;font-size:.78em;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--blau)}
+.knopfreihe{display:flex;flex-wrap:wrap;gap:.5em;align-items:center}
 .kiwarn{color:#b26a00;font-size:.9em;cursor:help}
 /* Gesamtzahlen im Kopf der Startseite */
 .gesamtleiste{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px;padding:0}
