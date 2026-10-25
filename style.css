@@ -181,9 +181,9 @@ td.zahl,th.zahl{text-align:right;white-space:nowrap;font-variant-numeric:tabular
 .nw{white-space:nowrap}
 tbody tr:hover{background:var(--hauch)}
 td.rang{font-family:var(--kopf);font-weight:750;color:var(--schiefer);width:3ch}
-td.rang .pb{display:block;font-family:var(--text,inherit);font-size:.68rem;font-weight:500;opacity:.75;white-space:nowrap;cursor:help}
-.elo-pm{display:block;font-size:.7rem;font-weight:500;opacity:.65;cursor:help}
 .tabellen-fuss{margin:10px 14px 4px}
+.massstab{margin:12px 14px 0;padding:.6em .9em;border-left:3px solid var(--schiefer);background:color-mix(in srgb,var(--schiefer) 8%,transparent);border-radius:6px}
+.massstab ul{margin:.3em 0 0;padding-left:1.2em}
 .cmdzelle{display:flex;align-items:center;gap:12px;min-width:220px}
 .cmdzelle img,.cmdzelle .ohnebild{width:58px;height:42px;border-radius:6px;object-fit:cover;flex:none;background:var(--hauch)}
 .cmdzelle a{font-weight:700;text-decoration:none;color:var(--tinte)}
