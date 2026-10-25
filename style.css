@@ -117,6 +117,18 @@ color:var(--tinte);display:flex;justify-content:space-between;align-items:center
 .nur-fans .schritte{margin:.35em 0 0;padding-left:1.3em}.nur-fans .schritte li{margin:.15em 0}
 .fans-marke{display:inline-block;font-size:.78em;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--blau)}
 .knopfreihe{display:flex;flex-wrap:wrap;gap:.5em;align-items:center}
+.mm-ablauf{margin-top:14px;padding:14px 18px;border:1px solid var(--linie);border-left:3px solid var(--blau);border-radius:var(--rund);background:color-mix(in srgb,var(--blau) 6%,transparent)}
+.mm-schritte{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px 24px;margin:10px 0 0;padding:0}
+.mm-schritte li{counter-increment:s;position:relative;padding-left:34px;margin:0;font-size:.9rem;line-height:1.4}
+.mm-schritte li::before{content:counter(s);position:absolute;left:0;top:0;width:24px;height:24px;border-radius:50%;background:var(--blau);color:var(--papier);font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center}
+.mm-schritte b{display:block}.mm-schritte span{color:var(--schiefer)}
+.mm-raster{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px;margin-top:20px}
+.mm-karte{display:flex;flex-direction:column}.mm-karte p{margin:0 0 10px}
+.mm-kopf{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-bottom:10px}.mm-kopf h3{margin:0 4px 0 0}.mm-kopf .neu-marke{margin-left:0}
+.mm-fans{font-size:.68rem;font-weight:700;padding:2px 8px;border-radius:99px;color:var(--blau);box-shadow:inset 0 0 0 1px var(--blau)}
+.mm-fuss{margin-top:auto;padding-top:6px}.mm-fuss .knopf{margin:0}
+.mm-melden{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;margin-top:20px;padding:14px 18px;border:1px solid var(--linie);border-radius:var(--rund);background:var(--papier)}
+.mm-melden .knopf{margin:0}
 .kiwarn{color:#b26a00;font-size:.9em;cursor:help}
 /* Gesamtzahlen im Kopf der Startseite */
 .gesamtleiste{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px;padding:0}
