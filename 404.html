@@ -1,0 +1,44 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>CommanderTestLabor</title>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:15vh 20px;text-align:center;
+color:#1d2430;background:#f4f5f7}@media(prefers-color-scheme:dark){body{color:#e8eaee;background:#14171c}}
+a{color:inherit}.l{opacity:.6}</style></head><body><p id="t" class="l">Seite wird geladen …</p>
+<noscript><p>Bitte JavaScript aktivieren, um diese Seite zu sehen. / Please enable JavaScript to view this page.</p></noscript>
+<script>
+(async () => {
+  const t = document.getElementById("t");
+  const fehlt = () => { document.title = "Seite nicht gefunden – CommanderTestLabor";
+    t.className = ""; t.innerHTML = 'Diese Seite gibt es nicht. / This page does not exist.<br><br><a href="/">CommanderTestLabor</a>'; };
+  try {
+    const m = location.pathname.match(/\/(en\/)?e\/([A-Za-z0-9_-]{12,40})\.html$/);
+    if (!m || !window.crypto || !crypto.subtle) return fehlt();
+    const code = m[2], sprache = m[1] ? "en" : "de", enc = new TextEncoder();
+    const sha = async (alg, b) => new Uint8Array(await crypto.subtle.digest(alg, b));
+    const hex = b => Array.from(b, x => x.toString(16).padStart(2, "0")).join("");
+    const datei = hex(await sha("SHA-256", enc.encode("ctl-datei|" + sprache + "|" + code))).slice(0, 32);
+    const r = await fetch("/p/" + datei + ".txt", {cache: "no-store"});
+    if (!r.ok) return fehlt();
+    const roh = Uint8Array.from(atob((await r.text()).trim()), c => c.charCodeAt(0));
+    const nonce = roh.slice(0, 16), marke = roh.slice(roh.length - 32), daten = roh.slice(16, roh.length - 32);
+    const schl = await sha("SHA-256", enc.encode("ctl-key|" + code));
+    const mac = await crypto.subtle.importKey("raw", await sha("SHA-256", enc.encode("ctl-mac|" + code)),
+                                              {name: "HMAC", hash: "SHA-256"}, false, ["verify"]);
+    const geprueft = new Uint8Array(16 + daten.length); geprueft.set(nonce, 0); geprueft.set(daten, 16);
+    if (!(await crypto.subtle.verify("HMAC", mac, marke, geprueft))) return fehlt();
+    const bloecke = Math.ceil(daten.length / 64), aus = new Uint8Array(daten.length);
+    for (let s = 0; s < bloecke; s += 256) {
+      const jobs = [];
+      for (let i = s; i < Math.min(bloecke, s + 256); i++) {
+        const b = new Uint8Array(32 + 16 + 8); b.set(schl, 0); b.set(nonce, 32);
+        new DataView(b.buffer).setUint32(52, i);
+        jobs.push(sha("SHA-512", b).then(k => { const o = i * 64;
+          for (let j = 0; j < 64 && o + j < daten.length; j++) aus[o + j] = daten[o + j] ^ k[j]; }));
+      }
+      await Promise.all(jobs);
+    }
+    const html = new TextDecoder().decode(aus);
+    document.open(); document.write(html); document.close();
+  } catch (e) { fehlt(); }
+})();
+</script></body></html>

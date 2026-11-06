@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /e/
+Disallow: /en/e/
+Disallow: /p/
+Allow: /
+Sitemap: https://commandertestlabor.github.io/sitemap.xml
