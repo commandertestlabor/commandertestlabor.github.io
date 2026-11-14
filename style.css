@@ -126,6 +126,41 @@ color:var(--tinte);display:flex;justify-content:space-between;align-items:center
 .seitenkopf{padding-bottom:0}.seitenkopf+.abschnitt{padding-top:24px}.seitenkopf h1{margin:0 0 8px}.seitenkopf .lead{max-width:640px;margin:0}
 .fragen-gruppe{margin:34px 0 4px;font-size:1.25rem}.fragen-gruppe:first-child{margin-top:0}
 nav a[aria-current="page"]{color:var(--blau)}
+.mx-kopf{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;align-items:end;padding:36px 0 8px}
+.mx-kopf h1{max-width:none;margin:0;font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.02}.mx-kopf .lead{margin-top:12px}
+.mx-status{background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund);padding:18px 20px}
+.mx-status .zeile{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.mx-status .zahl{font-family:var(--kopf);font-size:2.4rem;font-weight:760;line-height:1;color:var(--gut)}
+.mx-status.zu .zahl{color:var(--offen)}.mx-status .zahl small{font-size:1rem;font-weight:600;color:var(--schiefer)}
+.mx-pill{font-size:.78rem;font-weight:700;padding:4px 10px;border-radius:99px;background:var(--gut-hauch);color:var(--gut);white-space:nowrap}
+.mx-status.zu .mx-pill{background:color-mix(in srgb,var(--offen) 14%,transparent);color:var(--offen)}
+.mx-balken{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;margin:14px 0 10px}
+.mx-balken i{height:10px;border-radius:3px;background:var(--hauch);box-shadow:inset 0 0 0 1px var(--linie)}
+.mx-balken i.voll{background:var(--schiefer);box-shadow:none;opacity:.55}.mx-status.zu .mx-balken i.voll{background:var(--offen);opacity:.7}
+.mx-status p{margin:0;font-size:.9rem;color:var(--schiefer)}
+.mx-optionen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.mx-karte{position:relative;display:flex;flex-direction:column;background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund);padding:22px 22px 20px;overflow:hidden}
+.mx-karte::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--farbe)}
+.mx-karte h2{font-size:1.35rem;margin:0}.mx-karte .frage{margin:6px 0 14px;color:var(--schiefer)}
+.mx-karte ul{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:8px}
+.mx-karte li{padding-left:22px;position:relative;line-height:1.4;margin:0}
+.mx-karte li::before{content:"";position:absolute;left:2px;top:.5em;width:9px;height:9px;border-radius:50%;background:var(--farbe)}
+.mx-meta{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.mx-meta span{font-size:.78rem;padding:3px 9px;border-radius:99px;background:var(--hauch);color:var(--schiefer)}
+.mx-aktion{margin-top:auto;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.mx-aktion .knopf{align-self:stretch;text-align:center;margin:0}.mx-aktion a.leise{font-size:.9rem}
+.mx-ablauf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:36px;border:1px solid var(--linie);border-radius:var(--rund);background:var(--papier);overflow:hidden}
+.mx-ablauf div{padding:16px 20px;border-left:1px solid var(--linie)}.mx-ablauf div:first-child{border-left:0}
+.mx-ablauf b{display:block;font-family:var(--kopf);font-size:1.05rem}.mx-ablauf .nr{font-family:var(--kopf);font-weight:760;color:var(--blau);margin-right:6px}
+.mx-ablauf div>span{font-size:.9rem;color:var(--schiefer)}
+.mx-unten{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:18px;margin-top:18px;align-items:start}
+.mx-unten .tafel{margin-top:0}
+.mx-kofi{padding:20px;border-radius:var(--rund);background:var(--blau-hell);border:1px solid color-mix(in srgb,var(--blau) 30%,transparent)}
+.mx-kofi h3{margin:0 0 6px}.mx-kofi p{margin:0 0 14px}.mx-kofi .knopf{margin:0}
+.mx-links{display:grid;gap:10px;margin-top:18px}
+.mx-link{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;border:1px solid var(--linie);border-radius:var(--rund);background:var(--papier)}
+.mx-link p{margin:2px 0 0}.mx-link .knopf{margin:0;flex-shrink:0}
+@media (max-width:900px){.mx-kopf,.mx-optionen,.mx-unten,.mx-ablauf{grid-template-columns:1fr}.mx-ablauf div{border-left:0;border-top:1px solid var(--linie)}.mx-ablauf div:first-child{border-top:0}}
 .mm-spam{margin:8px 0 0;max-width:880px}.mm-hinweis{padding:12px 16px;border-radius:var(--rund);background:color-mix(in srgb,var(--blau) 8%,transparent);font-size:.92rem;max-width:880px}
 .mm-haupt{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;margin-top:20px}
 .mm-frage{font-size:1.02rem}.mm-punkte{margin:0 0 12px;padding-left:20px}.mm-punkte li{margin:4px 0}
