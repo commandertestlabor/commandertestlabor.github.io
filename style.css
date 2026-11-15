@@ -523,7 +523,7 @@ border-radius:var(--rund-klein);padding:12px 14px}
 .tk-grund{grid-column:1/-1;margin:2px 0 0}
 ul.vertreten{columns:2 260px;column-gap:28px}
 details.mehr summary{cursor:pointer;color:var(--blau);font-weight:700;margin-top:12px}
-details.stufe-gruppe{border-top:1px solid var(--linie)}details.stufe-gruppe:first-of-type{margin-top:8px}
+tr.ich td{font-weight:700;background:var(--hauch)}details.stufe-gruppe{border-top:1px solid var(--linie)}details.stufe-gruppe:first-of-type{margin-top:8px}
 details.stufe-gruppe>summary{cursor:pointer;padding:10px 2px;font-weight:600;display:flex;gap:10px;align-items:center}
 details.stufe-gruppe table{margin-bottom:10px;table-layout:fixed;width:100%}
 details.stufe-gruppe th:first-child{width:64px}details.stufe-gruppe th:nth-child(2){width:46%}
