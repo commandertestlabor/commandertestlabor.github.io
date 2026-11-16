@@ -477,6 +477,25 @@ ul.einfluss a.k,.block ul a.k{color:var(--tinte);text-decoration:none;border-bot
 .platz-liste{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:auto auto auto;gap:5px 10px;align-items:center;font-size:.9rem}
 .platz-liste li{display:contents}.platz-liste b{font-variant-numeric:tabular-nums}.platz-liste small{color:var(--schiefer)}
 @media (max-width:420px){.donut-zeile{flex-direction:column;align-items:flex-start}}
+.b-zwei{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;align-items:start}.b-zwei>.block{margin:0}
+.b-drei{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:16px}
+.b-fazit{background:var(--papier);border:1px solid var(--linie);border-top:3px solid var(--k);border-radius:var(--rund);padding:16px 18px}
+.b-fazit small{color:var(--k);font-weight:700;font-size:.78rem}.b-fazit b{display:block;font:700 1.05rem var(--kopf);margin:4px 0}.b-fazit p{margin:0;color:var(--schwach);font-size:.9rem}
+.b-mrow{display:grid;grid-template-columns:28px 1fr 52px 58px;gap:10px;align-items:center;margin:9px 0}
+.b-st{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;font:800 .8rem var(--kopf);color:var(--z);background:color-mix(in srgb,var(--z) 16%,transparent)}
+.b-mbar{position:relative;height:12px;border-radius:6px;background:var(--hauch)}.b-mbar i{display:block;height:100%;border-radius:6px;background:var(--z)}
+.b-mbar em{position:absolute;left:50%;top:-4px;bottom:-4px;border-left:2px dashed var(--schwach)}
+.b-mrow b{text-align:right;font:700 .95rem var(--kopf)}.b-mrow small{color:var(--schwach);font-size:.75rem}
+.b-liste{list-style:none;margin:0;padding:0}.b-liste li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--linie)}.b-liste li:last-child{border:0}
+.b-vier{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.b-karte{margin:0;background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund);overflow:hidden}
+.b-bild{height:110px;background:var(--hauch) center/cover}.b-karte figcaption{padding:12px 14px 14px}
+.b-karte small{color:#b7791f;font-weight:700;font-size:.75rem}.b-karte b{display:block;font:700 .95rem var(--kopf);margin:2px 0 6px}
+.b-karte span{display:block;font-weight:700}.b-karte em{font-style:normal;color:var(--schwach);font-size:.82rem}
+.b-hist{display:flex;gap:10px;align-items:flex-end;height:150px;padding-top:10px}.b-hb{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end}
+.b-hb i{display:block;width:100%;background:var(--blau);border-radius:6px 6px 0 0;min-height:4px}.b-hb b{font:700 .8rem var(--kopf);margin-top:4px}.b-hb small{color:var(--schwach);font-size:.7rem}
+.b-vgl{display:grid;grid-template-columns:1fr auto auto;gap:7px 18px;font-size:.9rem}.b-vgl span{color:var(--schwach)}.b-vgl b{text-align:right}.b-vgl .h{font-size:.75rem;text-align:right}
+@media (max-width:760px){.b-zwei,.b-drei{grid-template-columns:1fr}.b-vier{grid-template-columns:repeat(2,1fr)}}
 .tt-kopf{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;padding:20px 22px;border-bottom:1px solid var(--linie)}
 .tt-platz{text-align:center;padding-right:22px;border-right:1px solid var(--linie)}
 .tt-platz b{display:block;font:800 3.6rem/1 var(--kopf);letter-spacing:-2px}.tt-platz small{color:var(--schwach)}
