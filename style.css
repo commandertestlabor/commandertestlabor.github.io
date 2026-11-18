@@ -534,6 +534,11 @@ details.lg-archiv{border-top:1px solid var(--linie);padding:10px 0}details.lg-ar
 .neu-marke{display:inline-block;background:var(--gut);color:#fff;font:800 .72rem var(--kopf);padding:3px 9px;border-radius:99px;margin-right:8px;vertical-align:middle}
 .neu-band{display:inline-flex;align-items:center;gap:4px;margin:0 0 16px;padding:8px 14px;border:1px solid var(--linie);background:var(--papier);border-radius:99px;color:var(--tinte);text-decoration:none;font-size:.92rem}
 .neu-band:hover{border-color:var(--gut)}
+.neu-leiste{display:flex;align-items:center;gap:14px;margin:18px 0 6px;padding:12px 16px;border:1px solid var(--linie);border-left:4px solid var(--gut);border-radius:var(--rund);background:var(--papier);color:var(--tinte);text-decoration:none}
+.neu-leiste:hover{border-color:var(--gut)}.nl-text{flex:1;min-width:0}.nl-text span{color:var(--schiefer)}
+.nl-los{font-weight:800;color:var(--gut);white-space:nowrap}.nl-los::after{content:" ›"}
+.hero-stand{margin-top:14px}
+@media (max-width:700px){.neu-leiste{flex-wrap:wrap;gap:8px}.nl-text span{display:block;margin-top:2px}}
 .neu-kasten{margin:0 0 20px;padding:14px 16px;border:1px solid var(--linie);border-left:4px solid var(--gut);background:var(--papier);border-radius:var(--rund);max-width:640px;font-size:.95rem}
 .neu-kasten p{margin:6px 0 0}.neu-titel{font-family:var(--kopf);font-size:1.05rem;vertical-align:middle}
 .neu-links{display:flex;gap:16px;flex-wrap:wrap;font-weight:700}
