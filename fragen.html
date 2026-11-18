@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="de" href="https://commandertestlabor.github.io/fragen.html"><link rel="alternate" hreflang="en" href="https://commandertestlabor.github.io/en/fragen.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2212%22%20r%3D%229%22%20fill%3D%22%23f4edcf%22%20stroke%3D%22%23c9bd8c%22%20stroke-width%3D%222%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2227%22%20r%3D%229%22%20fill%3D%22%233e7cc0%22/%3E%3Ccircle%20cx%3D%2244%22%20cy%3D%2251%22%20r%3D%229%22%20fill%3D%22%233b3640%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2251%22%20r%3D%229%22%20fill%3D%22%23cf4b2c%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2227%22%20r%3D%229%22%20fill%3D%22%233c8c55%22/%3E%3C/svg%3E">
 <script>try{var t=localStorage.getItem("ctl-thema");if(!t&&(/reddit/i.test(navigator.userAgent)||/reddit[.]/i.test(document.referrer)))t="dunkel";if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<link rel="stylesheet" href="style.css?v=0cf1c83d"><script data-goatcounter="https://commandertestlabor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
+<link rel="stylesheet" href="style.css?v=962d5e20"><script data-goatcounter="https://commandertestlabor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
 <body>
 <header class="leiste"><div class="rahmen">
 <a class="marke" href="index.html"><span class="pips" title="Farbidentität: Weiß, Blau, Schwarz, Rot, Grün" aria-label="Farbidentität: Weiß, Blau, Schwarz, Rot, Grün"><i class="pip mw"></i><i class="pip mu"></i><i class="pip mb"></i><i class="pip mr"></i><i class="pip mg"></i></span>CommanderTestLabor</a>
@@ -97,6 +97,34 @@ document.querySelectorAll('input[data-filter]').forEach(function(f){
       z.style.display=z.textContent.toLowerCase().indexOf(q)>=0?'':'none'})})});
 document.querySelectorAll('.alle-knopf').forEach(function(k){k.addEventListener('click',function(){
   k.closest('.tafel').classList.add('zeige-alle')})});
+document.querySelectorAll('.tafel').forEach(function(t){var an=[],sa=t.querySelector('.stufenansicht'),ro=t.querySelector('.rolle'),
+  ak=t.querySelector('.alle-knopf');
+  t.querySelectorAll('[data-ansicht]').forEach(function(b){b.addEventListener('click',function(){var s=b.dataset.ansicht==='stufen';
+    if(sa)sa.hidden=!s;if(ro)ro.hidden=s;if(ak)ak.hidden=s;
+    t.querySelectorAll('[data-ansicht]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')})})});
+  t.querySelectorAll('[data-farbe]').forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.farbe,i=an.indexOf(f);
+    if(i<0)an.push(f);else an.splice(i,1);b.setAttribute('aria-pressed',i<0?'true':'false');if(an.length)t.classList.add('zeige-alle');
+    t.querySelectorAll('[data-f]').forEach(function(z){z.classList.toggle('farb-aus',!an.every(function(x){return z.dataset.f.indexOf(x)>=0}))})})})});
+document.querySelectorAll('.teilkarte').forEach(function(k){var url=k.dataset.url,text=k.dataset.text;
+  function ok(b){var a=b.textContent;b.textContent=b.dataset.ok;setTimeout(function(){b.textContent=a},1800)}
+  function kop(b,s){if(navigator.clipboard)navigator.clipboard.writeText(s).then(function(){ok(b)},function(){prompt('Link',s)});else prompt('Link',s)}
+  var t=k.querySelector('[data-tk=teilen]'),l=k.querySelector('[data-tk=link]'),bi=k.querySelector('[data-tk=bild]');
+  t.addEventListener('click',function(){if(navigator.share)navigator.share({title:document.title,text:text,url:url}).catch(function(){});else kop(t,text+' '+url)});
+  l.addEventListener('click',function(){kop(l,url)});
+  bi.addEventListener('click',function(){var c=document.createElement('canvas');c.width=1200;c.height=630;
+    var g=c.getContext('2d'),im=k.querySelector('.tk-bild img'),z=k.querySelectorAll('[data-z]');
+    function zeile(i,font,y,alpha){g.font=font;g.globalAlpha=alpha;g.fillText(z[i].textContent,64,y);g.globalAlpha=1}
+    function zeichne(){g.fillStyle='#11151b';g.fillRect(0,0,1200,630);
+      if(im&&im.naturalWidth){var r=Math.max(1200/im.naturalWidth,630/im.naturalHeight),w=im.naturalWidth*r,h=im.naturalHeight*r;
+        g.drawImage(im,(1200-w)/2,(630-h)/2,w,h)}
+      var v=g.createLinearGradient(0,0,1200,0);v.addColorStop(0,'rgba(17,21,27,.94)');v.addColorStop(.6,'rgba(17,21,27,.6)');
+      v.addColorStop(1,'rgba(17,21,27,.15)');g.fillStyle=v;g.fillRect(0,0,1200,630);g.fillStyle='#fff';
+      zeile(0,'500 28px "Public Sans",sans-serif',90,.85);zeile(1,'800 120px Bricolage,sans-serif',330,1);
+      zeile(2,'600 44px Bricolage,sans-serif',400,1);zeile(3,'400 32px "Public Sans",sans-serif',460,.9);
+      zeile(4,'400 26px "Public Sans",sans-serif',570,.8);
+      var a=document.createElement('a');a.download='community-rangliste.png';a.href=c.toDataURL('image/png');
+      document.body.appendChild(a);a.click();a.remove()}
+    if(im&&!im.complete)im.addEventListener('load',zeichne);else zeichne()})});
 (function(){var v=document.getElementById('vorschau');if(!v||!window.matchMedia('(hover:hover)').matches)return;
   document.querySelectorAll('a.k[data-bild]').forEach(function(a){
     a.addEventListener('mouseenter',function(){v.src=a.dataset.bild;v.style.display='block'});
