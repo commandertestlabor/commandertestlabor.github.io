@@ -511,6 +511,9 @@ details.lg-archiv{border-top:1px solid var(--linie);padding:10px 0}details.lg-ar
 .neu-marke{display:inline-block;background:var(--gut);color:#fff;font:800 .72rem var(--kopf);padding:3px 9px;border-radius:99px;margin-right:8px;vertical-align:middle}
 .neu-band{display:inline-flex;align-items:center;gap:4px;margin:0 0 16px;padding:8px 14px;border:1px solid var(--linie);background:var(--papier);border-radius:99px;color:var(--tinte);text-decoration:none;font-size:.92rem}
 .neu-band:hover{border-color:var(--gut)}
+.neu-kasten{margin:0 0 20px;padding:14px 16px;border:1px solid var(--linie);border-left:4px solid var(--gut);background:var(--papier);border-radius:var(--rund);max-width:640px;font-size:.95rem}
+.neu-kasten p{margin:6px 0 0}.neu-titel{font-family:var(--kopf);font-size:1.05rem;vertical-align:middle}
+.neu-links{display:flex;gap:16px;flex-wrap:wrap;font-weight:700}
 .mx-liga{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;margin-top:18px;background:var(--papier);border:1px solid var(--linie);border-left:4px solid var(--gut);border-radius:var(--rund);padding:20px 22px}
 .mx-liga h2{display:inline;vertical-align:middle}.mx-liga p{margin:8px 0 0;max-width:70ch}.mx-liga .mx-aktion{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
 @media (max-width:700px){.lg-kopf,.mx-liga{grid-template-columns:1fr}.lg-mit{max-width:none}.lg-podest{gap:6px}.lg-pod{padding:10px 6px}.lg-pod b{font-size:.95rem}}
