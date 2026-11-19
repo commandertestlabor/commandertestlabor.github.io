@@ -212,6 +212,38 @@ background:linear-gradient(90deg,rgba(17,21,27,.94),rgba(17,21,27,.6) 60%,rgba(1
 .tk-ober{font-size:.85rem;opacity:.85}.tk-platz{font-family:var(--kopf);font-weight:800;font-size:clamp(2rem,6vw,3.6rem);line-height:1}
 .tk-cmd{font-family:var(--kopf);font-weight:600;font-size:1.2rem;margin-top:4px}.tk-fakten{opacity:.9;margin-top:6px}.tk-fuss{font-size:.8rem;opacity:.8}
 .tk-knoepfe{flex:1 1 200px;display:flex;flex-direction:column;gap:8px}.tk-knoepfe .knopf{margin:0}
+.es-rahmen .abschnitt{max-width:720px;margin:0 auto}
+.es-reiterleiste{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 14px}
+.es-reiter{font:inherit;font-weight:600;padding:10px 16px;min-height:44px;border-radius:999px;border:1px solid var(--linie);background:var(--papier);color:var(--tinte);cursor:pointer}
+.es-reiter[aria-selected=true]{background:var(--tinte);color:var(--papier);border-color:var(--tinte)}
+.es-karte{background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund);padding:22px;display:flex;flex-direction:column;gap:18px}
+.es-stand{margin:0;background:var(--hauch);border-radius:var(--rund-klein);padding:10px 14px;font-size:.92rem}
+.es-feld{display:flex;flex-direction:column;gap:6px;border:0;margin:0;padding:0;min-width:0;position:relative}
+.es-feld>label,.es-feld>legend,.es-deck>legend{font-weight:600}
+.es-feld input[type=text],.es-feld input[type=email],.es-feld textarea{font:inherit;font-size:16px;padding:12px 14px;min-height:48px;box-sizing:border-box;
+border-radius:var(--rund-klein);border:1px solid var(--linie);background:var(--tisch);color:var(--tinte);width:100%}
+.es-feld textarea{min-height:220px;line-height:1.5;resize:vertical}
+.es-feld.falsch input,.es-feld.falsch textarea,.es-feld.falsch .es-pillen{outline:2px solid var(--warn);outline-offset:1px}
+.es-hilfe{font-size:.82rem;color:var(--schiefer)}.es-mitte{text-align:center;margin:-6px 0 0}
+.es-vorschlag{border:1px solid var(--linie);border-radius:var(--rund-klein);overflow:hidden;background:var(--papier)}
+.es-vorschlag button{display:block;width:100%;text-align:left;font:inherit;padding:11px 14px;min-height:44px;border:0;border-bottom:1px solid var(--linie);
+background:none;color:var(--tinte);cursor:pointer}.es-vorschlag button:last-child{border-bottom:0}
+.es-vorschlag button:hover,.es-vorschlag button:focus{background:var(--blau-hell)}
+.es-pillen,.es-budget{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.es-budget input{flex:1 1 140px;width:auto!important}
+.es-pille{position:relative}.es-pille input{position:absolute;opacity:0;inset:0}
+.es-pille span,.es-pille-knopf{display:inline-flex;align-items:center;font:inherit;font-weight:600;padding:10px 16px;min-height:44px;box-sizing:border-box;
+border-radius:999px;border:1px solid var(--linie);background:none;color:var(--tinte);cursor:pointer}
+.es-pille input:checked+span{background:var(--tinte);color:var(--papier);border-color:var(--tinte)}
+.es-pille input:focus-visible+span{outline:2px solid var(--blau);outline-offset:2px}
+.es-deck{border:1px solid var(--linie);border-radius:var(--rund-klein);padding:14px;margin:0;display:flex;flex-direction:column;gap:12px}
+.es-deck textarea{min-height:140px!important}
+.es-kofi{background:var(--hauch);border-radius:var(--rund-klein);padding:12px 14px;display:flex;flex-direction:column;gap:12px}
+.es-haken{display:flex;gap:12px;align-items:flex-start;cursor:pointer}.es-haken input{width:22px;height:22px;margin:1px 0 0;flex:none}
+.es-haken .es-hilfe{display:block;margin-top:2px}
+.es-fehler{margin:0;color:var(--warn);font-weight:600}
+.es-senden{font-size:1.05rem;padding:14px 18px;min-height:52px;margin:0}.es-senden[disabled]{opacity:.6}
+.es-danke h2{margin:0}
+.es-rahmen [hidden]{display:none!important}
 .fx{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px;align-items:start}
 .fx-nav{position:sticky;top:20px;display:grid;gap:2px;font-size:.95rem}
 .fx-nav a{padding:7px 12px;border-radius:8px;color:var(--schiefer);text-decoration:none}
