@@ -740,6 +740,28 @@ button.fav[aria-pressed=true]{background:#d9a520;border-color:#d9a520;color:#1c2
 .kz-raster .kz b{display:block;font:800 1.5rem/1.1 var(--kopf)}.kz-raster .kz span{font-size:.8rem;color:var(--schiefer)}
 .neu-tag{margin-bottom:18px}.neu-tag h3{font-size:1rem;margin-bottom:6px}.neu-tag ul{margin:0;padding-left:20px}.neu-tag li{margin:4px 0}
 
+.kt-hinweis{background:var(--papier);border:1px solid var(--linie);border-left:4px solid var(--blau);border-radius:var(--rund-klein);padding:10px 14px;margin:14px 0 0;font-size:.92rem;max-width:72ch}
+.kt-gruppe{margin-bottom:10px}.kt-label{display:block;font-size:.8rem;color:var(--schiefer);font-weight:600;margin-bottom:4px}
+.kt-reiter{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.kt-reiter button{flex:0 0 auto;border:1px solid var(--linie);background:var(--papier);color:var(--tinte);border-radius:999px;padding:6px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+.kt-reiter button small{color:var(--schiefer);margin-left:5px;font-size:.78rem}
+.kt-reiter button[aria-pressed=true]{background:var(--blau);border-color:var(--blau);color:var(--papier)}.kt-reiter button[aria-pressed=true] small{color:inherit;opacity:.8}
+.kt-reiter button:focus-visible,.kt-farben button:focus-visible,.kt-tab th button:focus-visible{outline:2px solid var(--blau);outline-offset:2px}
+.kt-leiste{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0 6px}
+.kt-leiste input,.kt-leiste select{font:inherit;font-size:.92rem;padding:7px 10px;border:1px solid var(--linie);border-radius:var(--rund-klein);background:var(--papier);color:var(--tinte)}
+.kt-leiste input{flex:1 1 180px;min-width:0}
+.kt-farben{display:flex;gap:5px}.kt-farben button{width:32px;height:32px;border-radius:50%;border:2px solid var(--linie);font:700 .8rem var(--text);cursor:pointer;color:#1c2431;opacity:.55}
+.kt-farben button[aria-pressed=true]{opacity:1;border-color:var(--tinte)}
+.kt-f-W{background:#f3eed8}.kt-f-U{background:#a9cdea}.kt-f-B{background:#b3a8a4}.kt-f-R{background:#f0a48c}.kt-f-G{background:#a5d3ad}
+.kt-top-titel{font-size:1.05rem;margin:16px 0 8px}
+.kt-top{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.kt-kachel{display:flex;gap:10px;align-items:center;background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund-klein);padding:8px;text-decoration:none;color:var(--tinte);min-width:0}
+.kt-kachel img{width:52px;border-radius:4px;flex:0 0 auto}.kt-kachel b{display:block;line-height:1.25;overflow-wrap:anywhere}.kt-kachel span span{font-size:.82rem;color:var(--schiefer)}
+.kt-kachel:hover b{color:var(--blau)}
+@media (max-width:640px){.kt-top{grid-template-columns:1fr}}
+.kt-tab th button{all:unset;cursor:pointer;font:inherit;color:inherit}.kt-tab th[aria-sort=descending] button::after{content:" \25BE"}.kt-tab th[aria-sort=ascending] button::after{content:" \25B4"}
+.kt-typ{display:block;font-size:.76rem;color:var(--schiefer)}.kt-wenig{font-style:italic}
+
 /* echte Mana-Symbole (Scryfall-SVGs, selbst gehostet) */
 .pip.mw,.pip.mu,.pip.mb,.pip.mr,.pip.mg,.pip.mc{box-shadow:none;background-color:transparent;background-size:contain;
 background-repeat:no-repeat;background-position:center;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
