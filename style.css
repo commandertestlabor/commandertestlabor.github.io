@@ -803,6 +803,20 @@ button.fav[aria-pressed=true]{background:#d9a520;border-color:#d9a520;color:#1c2
 .syn-liste{list-style:none;padding:0;margin:8px 0 0}.syn-liste li{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--linie)}
 .syn-plus{margin-left:auto;color:var(--gut);font-weight:700;font-variant-numeric:tabular-nums}
 
+.urt{display:inline-block;font-size:.78rem;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.u4{background:var(--gut);color:var(--papier)}.u3{background:color-mix(in srgb,var(--gut) 16%,transparent);color:var(--gut)}.u2{background:var(--hauch);color:var(--schiefer)}.u1{background:color-mix(in srgb,var(--warn) 14%,transparent);color:var(--warn)}.u0{background:transparent;color:var(--schiefer);font-weight:500;padding-left:0}
+.kt-hinweis h2{font-size:1.05rem;margin:0 0 6px}.kt-hinweis p{margin:0 0 8px}
+.kt-bsp{margin:8px 0 4px}.kt-vz{display:grid;grid-template-columns:170px 1fr 48px;gap:10px;align-items:center;margin:6px 0;font-size:.92rem}
+.kt-vz i{display:block;height:12px;border-radius:6px;background:var(--hauch);box-shadow:inset 0 0 0 1px var(--linie);overflow:hidden}.kt-vz i b{display:block;height:100%;border-radius:6px}
+.kt-vz b.mit{background:var(--gut)}.kt-vz b.ohne{background:#9aa3b2}.kt-vz em{font-style:normal;text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.kt-skala{display:grid;grid-template-columns:repeat(2,auto 1fr);gap:6px 10px;align-items:center;margin:10px 0 8px;font-size:.88rem}
+@media (max-width:640px){.kt-skala{grid-template-columns:auto 1fr}.kt-vz{grid-template-columns:118px 1fr 42px;font-size:.86rem}}
+.kt-vergleich{margin:10px 0 6px;max-width:520px}.kt-vergleich p{margin:8px 0 0}
+.kt-wert{white-space:nowrap}.kt-wert b{display:inline-block;min-width:3.2em;font-variant-numeric:tabular-nums}
+.kt-bal{display:inline-block;vertical-align:middle;position:relative;width:90px;height:8px;border-radius:4px;background:var(--hauch);box-shadow:inset 0 0 0 1px var(--linie);margin-left:6px}
+.kt-bal i{position:absolute;left:0;top:0;bottom:0;background:var(--gut);border-radius:4px}.kt-bal em{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--tinte);opacity:.55}
+@media (max-width:480px){.kt-bal{display:none}.kt-wert b{min-width:0}.kt-tab td:first-child{overflow-wrap:anywhere}.kt-tab td,.kt-tab th{padding-left:6px;padding-right:6px}.kt-tab .urt{font-size:.72rem;padding:2px 7px}.u0{white-space:normal}}
+
 /* echte Mana-Symbole (Scryfall-SVGs, selbst gehostet) */
 .pip.mw,.pip.mu,.pip.mb,.pip.mr,.pip.mg,.pip.mc{box-shadow:none;background-color:transparent;background-size:contain;
 background-repeat:no-repeat;background-position:center;filter:drop-shadow(0 1px 1px rgba(0,0,0,.25))}
