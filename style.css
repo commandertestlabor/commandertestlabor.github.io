@@ -296,7 +296,11 @@ border-radius:999px;border:1px solid var(--linie);background:none;color:var(--ti
 .mm-fuss{margin-top:auto;padding-top:6px}.mm-fuss .knopf{margin:0}
 .mm-melden{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;margin-top:20px;padding:14px 18px;border:1px solid var(--linie);border-radius:var(--rund);background:var(--papier)}
 .mm-melden .knopf{margin:0}
-.kiwarn{color:#b26a00;font-size:.9em;cursor:help}
+.kiwarn{display:inline;font-size:.82em;color:var(--schiefer)}.kiwarn.stark{color:#b26a00}
+.kiwarn summary{display:inline;list-style:none;cursor:pointer;white-space:nowrap;border-radius:6px;padding:0 4px}.kiwarn summary::-webkit-details-marker{display:none}
+.kiwarn summary:hover,.kiwarn[open] summary{background:var(--hauch)}
+.kiw-box{display:block;margin:6px 0 4px;padding:8px 10px;border:1px solid var(--linie);border-radius:var(--rund-klein);background:var(--hauch);color:var(--tinte);font-size:.92em;line-height:1.45;white-space:normal;max-width:340px}
+.kiw-box p{margin:0 0 6px}.kiw-box ul{margin:2px 0 8px;padding-left:1.1em}.kiw-box b{font-size:.92em}
 /* Gesamtzahlen im Kopf der Startseite */
 .gesamtleiste{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px;padding:0}
 .gesamtleiste li{background:var(--hauch);border:1px solid var(--linie);border-radius:99px;padding:5px 12px;font-size:.92rem;color:var(--schiefer)}
@@ -803,10 +807,15 @@ button.fav[aria-pressed=true]{background:#d9a520;border-color:#d9a520;color:#1c2
 .ks-feld{position:absolute;right:0;top:calc(100% + 10px);width:min(420px,calc(100vw - 32px));background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund);box-shadow:0 12px 32px rgba(0,0,0,.16);padding:10px;z-index:30}
 .ks-feld input{width:100%;font:inherit;padding:9px 12px;border:1px solid var(--linie);border-radius:var(--rund-klein);background:var(--hauch);color:var(--tinte)}
 .ks-vorschlaege{max-height:60vh;overflow:auto;margin-top:6px}
+.ks-stile{display:flex;flex-wrap:wrap;gap:6px;padding:2px 4px 6px}.ks-stile button{border:1px solid var(--linie);background:var(--papier);color:var(--tinte);border-radius:999px;padding:5px 11px;font:inherit;font-size:.86rem;cursor:pointer}
+.ks-stile button:hover{background:var(--blau-hell)}.ks-stile button small{margin-left:5px;color:var(--schiefer);font-size:.76rem}
+.ks-farben{display:flex;gap:6px;padding:2px 4px 4px}.ks-farben button{border:1px solid var(--linie);background:var(--papier);border-radius:999px;width:34px;height:30px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;opacity:.55}
+.ks-farben button[aria-pressed=true]{opacity:1;border-color:var(--blau);background:var(--blau-hell)}
+.ks-zurueck{border:0;background:none;color:var(--blau);font:inherit;font-size:.86rem;padding:4px;cursor:pointer}
 .ks-vorschlaege h4{margin:8px 4px 4px;font-size:.75rem;color:var(--schiefer);font-weight:600}
 .ks-vorschlaege a{display:flex;gap:10px;align-items:baseline;padding:7px 8px;border-radius:var(--rund-klein);color:var(--tinte);text-decoration:none}
 .ks-vorschlaege a:hover,.ks-vorschlaege a.akt{background:var(--blau-hell)}.ks-vorschlaege small{margin-left:auto;color:var(--schiefer);font-size:.78rem;white-space:nowrap}
-@media (max-width:760px){.ks{position:static}.ks-feld{left:12px;right:12px;width:auto;top:calc(100% + 4px)}
+@media (max-width:760px){.ks{position:static}.ks-feld{left:12px;right:12px;width:auto;top:calc(100% + 4px)}.ks-vorschlaege a{flex-wrap:wrap;gap:0 10px}.ks-vorschlaege a small{margin-left:0;flex-basis:100%;white-space:normal}
 .marke .pips{display:none}.marke{font-size:1rem}.leiste .rahmen{gap:8px 10px}}
 @media (max-width:360px){.marke{font-size:.9rem}.leiste a.sprache{padding:5px 7px}.ks-knopf,.thema-knopf{width:30px}}
 .syn-liste{list-style:none;padding:0;margin:8px 0 0}.syn-liste li{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--linie)}
