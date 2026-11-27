@@ -189,8 +189,15 @@ border-radius:8px;padding:6px 10px;width:fit-content;max-width:100%}
 .rl-farben button{width:40px;height:40px;border-radius:999px;border:2px solid var(--linie);background:var(--papier);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
 .rl-farben button[aria-pressed=true]{border-color:var(--blau);background:var(--blau-hell)}
 .rl-farben .pip{width:20px;height:20px}
-.rl-bewegung{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:baseline;margin:0 16px 12px;padding:10px 14px;background:var(--hauch);border-radius:var(--rund-klein);font-size:.9rem}
-.rl-bewegung ul{display:inline;list-style:none;margin:0 0 0 6px;padding:0}.rl-bewegung li{display:inline;margin-right:12px}
+.rl-bewegung{margin:0 16px 12px;padding:12px 14px;background:var(--hauch);border-radius:var(--rund-klein);font-size:.9rem}
+.rl-bewegung>b{display:block;margin-bottom:8px}
+.rb-spalten{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px 28px}
+.rb-spalten>div>span{display:block;margin-bottom:2px}
+.rl-bewegung ul{list-style:none;margin:0;padding:0}
+.rl-bewegung li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:4px 0;border-top:1px solid var(--linie)}
+.rl-bewegung li:first-child{border-top:0}
+.rb-name{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rl-bewegung .trend{flex:none;margin:0;min-width:0;text-align:right;font-size:.8rem;font-variant-numeric:tabular-nums}
 .stufenansicht{display:flex;flex-direction:column;gap:10px;padding:0 16px 16px}
 .sr{display:flex;border:1px solid var(--linie);border-radius:var(--rund);overflow:hidden}
 .sr .sr-kopf.stufe{flex:none;width:84px;height:auto;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;margin:0;border-radius:0;padding:10px 6px;text-align:center}
