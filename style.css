@@ -823,6 +823,32 @@ button.fav[aria-pressed=true]{background:#d9a520;border-color:#d9a520;color:#1c2
 .fd-stile .fd-mehr{border-style:dashed;color:var(--blau)}.fd-weitere{flex-basis:100%;margin-top:4px}
 .fd-suche{font:inherit;font-size:.9rem;width:100%;max-width:320px;padding:7px 10px;border-radius:var(--rund-klein);border:1px solid var(--linie);background:var(--papier);color:var(--tinte);margin-bottom:8px}
 .fd-liste{display:flex;gap:6px;flex-wrap:wrap;max-height:150px;overflow:auto;padding:2px}
+/* Felix 27.11.: neue Startseite + eigene Ranglisten-Seiten */
+.rl-klassen{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.rl-klassen a{padding:7px 14px;border-radius:999px;border:1px solid var(--linie);background:var(--papier);color:var(--tinte);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+.rl-klassen a:hover{border-color:var(--blau)}.rl-klassen a[aria-current=page]{background:var(--blau);border-color:var(--blau);color:var(--papier)}
+.rl-kennzahlen{margin:0 0 18px}
+.st-wege{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.st-weg{display:flex;flex-direction:column;gap:6px;padding:20px 22px;background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund);color:var(--tinte);text-decoration:none;transition:border-color .15s,transform .15s}
+.st-weg:hover,.st-weg:focus-visible{border-color:var(--blau);transform:translateY(-2px)}
+.st-weg b{font-family:var(--kopf);font-size:1.2rem;color:var(--blau)}.st-weg b::after{content:" →"}.st-weg span{color:var(--schiefer);font-size:.95rem;line-height:1.45}
+.st-top3{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.st-klasse{background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund);padding:14px 16px;display:flex;flex-direction:column}
+.st-klasse h3{margin:0 0 8px;font-size:1.05rem}.st-klasse h3 a{color:var(--tinte);text-decoration:none}.st-klasse h3 a:hover{color:var(--blau)}
+.st-klasse ol{list-style:none;margin:0 0 8px;padding:0;display:grid;gap:4px}
+.st-klasse li a{display:grid;grid-template-columns:18px 36px minmax(0,1fr) auto;gap:10px;align-items:center;padding:6px 4px;border-radius:var(--rund-klein);color:var(--tinte);text-decoration:none}
+.st-klasse li a:hover{background:var(--hauch)}
+.st-rang{font-weight:800;color:var(--schiefer);text-align:center}.st-klasse img,.st-ohne{width:36px;height:36px;border-radius:8px;object-fit:cover;background:var(--hauch)}
+.st-name{min-width:0;line-height:1.25}.st-name b,.st-name small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.st-name b{font-weight:600}.st-name b:only-child{white-space:normal;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.st-name small{font-size:.8rem;color:var(--schiefer)}.st-quote{font-weight:700;color:var(--gut);font-variant-numeric:tabular-nums}
+.st-mehr{margin-top:auto;font-size:.9rem;font-weight:600;color:var(--blau);text-decoration:none}.st-mehr:hover{text-decoration:underline}
+.st-unten{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.st-neu,.st-methode{background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund);padding:16px 20px;display:flex;flex-direction:column}
+.st-neu h2,.st-methode h2{margin:0 0 10px;font-size:1.15rem}
+.st-neu ul{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:8px}.st-neu li{line-height:1.4}
+.st-methode ol{margin:0 0 10px;padding-left:20px;display:grid;gap:6px;line-height:1.45}
+@media (max-width:760px){.st-wege{grid-template-columns:1fr;gap:10px}.st-weg{padding:16px 18px}.st-unten{grid-template-columns:1fr}
+.st-top3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.st-klasse{flex:0 0 82%;scroll-snap-align:start}}
 /* Felix 27.11.: Seite „Commander finden“ */
 .fx{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;align-items:start}
 .fx-filter{position:sticky;top:84px;background:var(--papier);border:1px solid var(--linie);border-radius:var(--rund);padding:6px 18px 18px}
