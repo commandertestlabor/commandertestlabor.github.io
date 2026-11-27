@@ -10,7 +10,7 @@
 <link rel="alternate" hreflang="en" href="https://commandertestlabor.github.io/en/"><link rel="alternate" hreflang="de" href="https://commandertestlabor.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2212%22%20r%3D%229%22%20fill%3D%22%23f4edcf%22%20stroke%3D%22%23c9bd8c%22%20stroke-width%3D%222%22/%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2227%22%20r%3D%229%22%20fill%3D%22%233e7cc0%22/%3E%3Ccircle%20cx%3D%2244%22%20cy%3D%2251%22%20r%3D%229%22%20fill%3D%22%233b3640%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2251%22%20r%3D%229%22%20fill%3D%22%23cf4b2c%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2227%22%20r%3D%229%22%20fill%3D%22%233c8c55%22/%3E%3C/svg%3E"><link rel="alternate" type="application/rss+xml" title="CommanderTestLabor" href="feed.xml">
 <script>try{var t=null,r=/reddit/i.test(navigator.userAgent)||/reddit[.]/i.test(document.referrer)||/[?&](ref=reddit|thema=dunkel)/i.test(location.search);try{t=localStorage.getItem("ctl-thema")}catch(e){}try{if(r)sessionStorage.setItem("ctl-dunkel","1");else r=sessionStorage.getItem("ctl-dunkel")==="1"}catch(e){}if(!t&&r)t="dunkel";if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
-<link rel="stylesheet" href="../style.css?v=bd58f67b"><script data-goatcounter="https://commandertestlabor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
+<link rel="stylesheet" href="../style.css?v=7af40461"><script data-goatcounter="https://commandertestlabor.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head>
 <body>
 <header class="leiste"><div class="rahmen">
 <a class="marke" href="index.html"><span class="pips" title="Color identity: White, Blue, Black, Red, Green" aria-label="Color identity: White, Blue, Black, Red, Green"><i class="pip mw"></i><i class="pip mu"></i><i class="pip mb"></i><i class="pip mr"></i><i class="pip mg"></i></span>CommanderTestLabor</a>
@@ -35,23 +35,34 @@
 <section class="abschnitt fav-box" id="favoriten" hidden>
 <h2>Your favourites</h2><ul></ul>
 </section>
-<section class="abschnitt finder" id="finder" data-daten="../daten/finder-en.json" data-img="../img/"><h2>Which commander suits you?</h2><p class="leise">Three questions – we show the strongest matching decks from our tests.</p><div class="fd-fragen"><div><div class="fd-frage">1. Your budget</div><select class="fd-budget" aria-label="Budget"></select></div><div><div class="fd-frage">2. Colors <span class="leise klein">(optional – only commanders in these colors)</span></div><div class="fd-farben" role="group" aria-label="Colors"><button type="button" data-fd-farbe="w" aria-pressed="false" title="White" aria-label="White"><i class="pip mw"></i></button><button type="button" data-fd-farbe="u" aria-pressed="false" title="Blue" aria-label="Blue"><i class="pip mu"></i></button><button type="button" data-fd-farbe="b" aria-pressed="false" title="Black" aria-label="Black"><i class="pip mb"></i></button><button type="button" data-fd-farbe="r" aria-pressed="false" title="Red" aria-label="Red"><i class="pip mr"></i></button><button type="button" data-fd-farbe="g" aria-pressed="false" title="Green" aria-label="Green"><i class="pip mg"></i></button></div></div><div class="fd-stil-box"><div class="fd-frage">3. How do you like to play?</div><div class="fd-stile"></div></div></div><h3 class="fd-titel">Your top 3</h3><div class="fd-treffer" aria-live="polite"><p class="leise">Loading …</p></div><script>(function(){var X={"egal": "Any", "platz": "Place", "siege": "wins", "stufe": "Tier", "leer": "No tested deck matches exactly – remove a color or the play style.", "fehler": "The data could not be loaded.", "loc": "en-US", "pz": "%"};var box=document.getElementById('finder');if(!box)return;
-var sel=box.querySelector('.fd-budget'),out=box.querySelector('.fd-treffer'),stb=box.querySelector('.fd-stile'),D=null,stil='',farben=[];
+<section class="abschnitt finder" id="finder" data-daten="../daten/finder-en.json" data-img="../img/"><h2>Which commander suits you?</h2><p class="leise">Three questions – we show the strongest matching decks from our tests.</p><div class="fd-fragen"><div><div class="fd-frage">1. Your budget</div><select class="fd-budget" aria-label="Budget"></select></div><div><div class="fd-frage">2. Colors <span class="leise klein">(optional – only commanders in these colors)</span></div><div class="fd-farben" role="group" aria-label="Colors"><button type="button" data-fd-farbe="w" aria-pressed="false" title="White" aria-label="White"><i class="pip mw"></i></button><button type="button" data-fd-farbe="u" aria-pressed="false" title="Blue" aria-label="Blue"><i class="pip mu"></i></button><button type="button" data-fd-farbe="b" aria-pressed="false" title="Black" aria-label="Black"><i class="pip mb"></i></button><button type="button" data-fd-farbe="r" aria-pressed="false" title="Red" aria-label="Red"><i class="pip mr"></i></button><button type="button" data-fd-farbe="g" aria-pressed="false" title="Green" aria-label="Green"><i class="pip mg"></i></button></div></div><div class="fd-stil-box"><div class="fd-frage">3. How do you like to play?</div><div class="fd-stile"></div></div></div><h3 class="fd-titel">Your top 3</h3><div class="fd-treffer" aria-live="polite"><p class="leise">Loading …</p></div><script>(function(){var X={"egal": "Any", "platz": "Place", "siege": "wins", "stufe": "Tier", "leer": "No tested deck matches exactly – remove a color or the play style.", "fehler": "The data could not be loaded.", "loc": "en-US", "pz": "%", "weitere": "more", "weniger": "− fewer", "suchen": "Search play style …"};var box=document.getElementById('finder');if(!box)return;
+var sel=box.querySelector('.fd-budget'),out=box.querySelector('.fd-treffer'),stb=box.querySelector('.fd-stile'),D=null,stil='',farben=[],offen=false,such='';
+var TOP=8;
 function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
-function zeige(){if(!D)return;var b=+sel.value;
- var L=D.d.filter(function(d){return d[1]===b&&(!stil||d[8].indexOf(stil)>=0)&&(!farben.length||d[7].split('').every(function(c){return farben.indexOf(c)>=0}))});
- L=L.slice(0,3);
+function passt(d,b,mitStil){return d[1]===b&&(!mitStil||!stil||d[8].indexOf(stil)>=0)&&(!farben.length||d[7].split('').every(function(c){return farben.indexOf(c)>=0}))}
+function knopf(s,n){return '<button type="button" data-s="'+s+'" aria-pressed="'+(s===stil)+'">'+esc(s?(D.s[s]||s):X.egal)+(n?' <span class="fd-n">'+n+'</span>':'')+'</button>'}
+function stile(){var b=+sel.value,z={};D.d.forEach(function(d){if(passt(d,b,false))d[8].forEach(function(s){z[s]=(z[s]||0)+1})});
+ var alle=Object.keys(z).sort(function(a,c){return z[c]-z[a]||String(D.s[a]).localeCompare(D.s[c])});
+ if(stil&&!z[stil])stil='';
+ var oben=alle.slice(0,TOP);if(stil&&oben.indexOf(stil)<0)oben.push(stil);
+ var rest=alle.filter(function(s){return oben.indexOf(s)<0});
+ var h=knopf('',0)+oben.map(function(s){return knopf(s,z[s])}).join('');
+ if(rest.length)h+='<button type="button" class="fd-mehr" aria-expanded="'+offen+'">'+(offen?X.weniger:'+ '+rest.length+' '+X.weitere)+'</button>';
+ if(offen&&rest.length){var q=such.toLowerCase();h+='<div class="fd-weitere"><input type="search" class="fd-suche" placeholder="'+X.suchen+'" value="'+esc(such)+'" aria-label="'+X.suchen+'"><div class="fd-liste">'
+  +rest.filter(function(s){return !q||String(D.s[s]).toLowerCase().indexOf(q)>=0}).map(function(s){return knopf(s,z[s])}).join('')+'</div></div>'}
+ stb.innerHTML=h;
+ stb.querySelectorAll('button[data-s]').forEach(function(k){k.addEventListener('click',function(){stil=k.dataset.s;if(stil&&rest.indexOf(stil)>=0)offen=false;zeige()})});
+ var m=stb.querySelector('.fd-mehr');if(m)m.addEventListener('click',function(){offen=!offen;such='';stile();var i=stb.querySelector('.fd-suche');if(i)i.focus()});
+ var i=stb.querySelector('.fd-suche');if(i)i.addEventListener('input',function(){such=i.value;var p=i.selectionStart;stile();var j=stb.querySelector('.fd-suche');j.focus();j.setSelectionRange(p,p)})}
+function zeige(){if(!D)return;var b=+sel.value;stile();
+ var L=D.d.filter(function(d){return passt(d,b,true)}).slice(0,3);
  out.innerHTML=L.length?L.map(function(d){return '<a class="fd-karte" href="'+esc(d[5])+'">'+(d[6]?'<img src="'+esc(box.dataset.img+d[6])+'" alt="" loading="lazy">':'<span class="fd-ohne"></span>')
   +'<span class="fd-text"><b>'+esc(d[0].split(' // ')[0])+'</b><span class="leise klein">'+X.stufe+' '+d[3]+' · '+X.platz+' '+d[2]+' · '+d[4].toLocaleString(X.loc)+X.pz+' '+X.siege+'</span>'
-  +'<span>'+d[8].map(function(s){return '<span class="stil">'+esc(D.s[s]||s)+'</span>'}).join('')+'</span></span></a>'}).join(''):'<p class="leise">'+X.leer+'</p>';
- stb.querySelectorAll('button').forEach(function(k){k.setAttribute('aria-pressed',k.dataset.s===stil?'true':'false')})}
+  +'<span>'+d[8].map(function(s){return '<span class="stil">'+esc(D.s[s]||s)+'</span>'}).join('')+'</span></span></a>'}).join(''):'<p class="leise">'+X.leer+'</p>'}
 box.querySelectorAll('[data-fd-farbe]').forEach(function(k){k.addEventListener('click',function(){var f=k.dataset.fdFarbe,i=farben.indexOf(f);
  if(i<0)farben.push(f);else farben.splice(i,1);k.setAttribute('aria-pressed',i<0?'true':'false');zeige()})});
 fetch(box.dataset.daten).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){D=d;
  sel.innerHTML=d.b.map(function(t,i){return '<option value="'+i+'"'+(i===d.std?' selected':'')+'>'+esc(t)+'</option>'}).join('');
- var da={};d.d.forEach(function(x){x[8].forEach(function(s){da[s]=1})});
- stb.innerHTML='<button type="button" data-s="">'+X.egal+'</button>'+Object.keys(d.s).filter(function(s){return da[s]}).map(function(s){return '<button type="button" data-s="'+s+'">'+esc(d.s[s])+'</button>'}).join('');
- stb.querySelectorAll('button').forEach(function(k){k.addEventListener('click',function(){stil=k.dataset.s;zeige()})});
  sel.addEventListener('change',zeige);zeige()}).catch(function(){out.innerHTML='<p class="leise">'+X.fehler+'</p>'});})();</script></section>
 <section class="abschnitt" id="rangliste">
 <h2>Rankings</h2>
